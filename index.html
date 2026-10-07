@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#10131a">
+  <title>Kocka.io</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="menu">
+    <div class="logo">KOCKA<span>.IO</span></div>
+    <p>Növeld meg a négyzetedet, edd meg a kisebbeket, és maradj életben!</p>
+    <form id="joinForm">
+      <input id="name" maxlength="18" placeholder="Játékosnév" autocomplete="nickname" required>
+      <button>JÁTÉK</button>
+    </form>
+    <div class="hint">Telefonon: húzd az ujjad a joystickon • Gépen: egér vagy WASD</div>
+  </div>
+
+  <div id="game" hidden>
+    <canvas id="canvas"></canvas>
+    <div class="hud">
+      <div class="brand">KOCKA.IO</div>
+      <div class="stats"><b id="score">0</b><small>PONT</small></div>
+      <div class="leaderboard"><strong>RANGLISTA</strong><div id="leaders"></div></div>
+    </div>
+    <div id="joystick"><div id="stick"></div></div>
+    <div class="mobileTip">Húzd a fehér pöttyöt a mozgáshoz</div>
+    <button id="exit" class="exit">Kilépés</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/game.js"></script>
+</body>
+</html>
