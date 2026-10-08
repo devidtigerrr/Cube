@@ -1,3 +1,4 @@
+console.log("KOCKA.IO GAME JS ELINDULT");
 const socket = io();
 const menu = document.getElementById("menu");
 const game = document.getElementById("game");
