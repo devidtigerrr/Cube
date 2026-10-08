@@ -13,8 +13,8 @@ const TICK = 30;
 const MAX_FOOD = 900;
 const MAX_BOTS = 20;
 
-app.use(express.static(path.join(__dirname, "public")));
-app.get("*", (req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
+app.use(express.static(__dirname));
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
 const players = new Map();
 const foods = new Map();
